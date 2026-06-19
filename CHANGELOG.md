@@ -6,7 +6,7 @@ All notable changes to this project are documented here.
 
 ### Changed
 
-- **New logo** `assets/logo.svg` — OpenClaw mascot + cursor pointer + “CURSOR MCP” wordmark (dark hero background for GitHub)
+- **New logo** `assets/logo.svg` — OpenClaw mascot + cursor pointer + “CURSOR MCP” wordmark (transparent background, as designed)
 - README & README.de.md use SVG logo (840px wide, crisp on all displays)
 - `banner.png` regenerated from logo (840×588)
 - Desktop shortcuts use `logo.svg` as icon

@@ -1,49 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="500" height="350" role="img" aria-label="OpenClaw Cursor MCP">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
   <defs>
+    <!-- Leuchteffekt für Augen und Cursor -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
+    
+    <!-- Farbverlauf für den Körper -->
     <radialGradient id="bodyGrad" cx="50%" cy="30%" r="50%">
       <stop offset="0%" stop-color="#ff4d5a"/>
       <stop offset="100%" stop-color="#cc2935"/>
     </radialGradient>
-    <radialGradient id="bgGrad" cx="50%" cy="40%" r="70%">
-      <stop offset="0%" stop-color="#1a2332"/>
-      <stop offset="55%" stop-color="#0f1419"/>
-      <stop offset="100%" stop-color="#0a0e14"/>
-    </radialGradient>
   </defs>
 
-  <!-- README / GitHub hero background -->
-  <rect width="500" height="350" fill="url(#bgGrad)"/>
-  <circle cx="80" cy="60" r="1.2" fill="#ffffff" opacity="0.35"/>
-  <circle cx="420" cy="45" r="1" fill="#ffffff" opacity="0.25"/>
-  <circle cx="360" cy="90" r="1.4" fill="#ffffff" opacity="0.3"/>
-  <circle cx="140" cy="120" r="1" fill="#ffffff" opacity="0.2"/>
-  <circle cx="450" cy="280" r="1.2" fill="#ffffff" opacity="0.25"/>
-  <circle cx="50" cy="250" r="1" fill="#ffffff" opacity="0.2"/>
-
+  <!-- Character Group (leicht nach oben verschoben für den extra Text) -->
   <g transform="translate(0, -10)">
+    <!-- Fühler / Ohren -->
     <path d="M230 65 Q220 50 205 52" fill="none" stroke="#e63946" stroke-width="5" stroke-linecap="round"/>
     <path d="M270 65 Q280 50 295 52" fill="none" stroke="#e63946" stroke-width="5" stroke-linecap="round"/>
-    <rect x="233" y="145" width="12" height="15" fill="#cc2935" rx="2"/>
-    <rect x="255" y="145" width="12" height="15" fill="#cc2935" rx="2"/>
-    <circle cx="250" cy="100" r="48" fill="url(#bodyGrad)"/>
-    <ellipse cx="200" cy="108" rx="14" ry="18" fill="#e63946" transform="rotate(-25 200 108)"/>
-    <ellipse cx="300" cy="108" rx="14" ry="18" fill="#e63946" transform="rotate(25 300 108)"/>
-    <circle cx="230" cy="90" r="5" fill="#00ffff" filter="url(#glow)"/>
-    <circle cx="230" cy="90" r="2.5" fill="#001a1a"/>
-    <circle cx="270" cy="90" r="5" fill="#00ffff" filter="url(#glow)"/>
-    <circle cx="270" cy="90" r="2.5" fill="#001a1a"/>
+
+    <!-- Beine -->
+    <rect x="233" y="145" width="12" height="15" fill="#cc2935" rx="2" />
+    <rect x="255" y="145" width="12" height="15" fill="#cc2935" rx="2" />
+
+    <!-- Körper -->
+    <circle cx="250" cy="100" r="48" fill="url(#bodyGrad)" />
+
+    <!-- Linker Arm -->
+    <ellipse cx="200" cy="108" rx="14" ry="18" fill="#e63946" transform="rotate(-25 200 108)" />
+    <!-- Rechter Arm -->
+    <ellipse cx="300" cy="108" rx="14" ry="18" fill="#e63946" transform="rotate(25 300 108)" />
+
+    <!-- Linkes Auge -->
+    <circle cx="230" cy="90" r="5" fill="#00ffff" filter="url(#glow)" />
+    <circle cx="230" cy="90" r="2.5" fill="#001a1a" />
+    
+    <!-- Rechtes Auge -->
+    <circle cx="270" cy="90" r="5" fill="#00ffff" filter="url(#glow)" />
+    <circle cx="270" cy="90" r="2.5" fill="#001a1a" />
+
+    <!-- Projekt-Bezug: Der Cursor -->
+    <!-- Positioniert an der rechten Hand des Characters -->
     <g transform="translate(290, 105) rotate(-15) scale(0.8)">
       <path d="M0 0 L0 35 L9 25 L16 40 L22 37 L15 22 L26 22 Z" fill="#00ffff" stroke="#001a1a" stroke-width="2" filter="url(#glow)"/>
     </g>
   </g>
 
+  <!-- Haupttext: OpenClaw -->
   <text x="250" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="64" text-anchor="middle" letter-spacing="-2">
     <tspan fill="#ffc2c9">Open</tspan><tspan fill="#f9384b">Claw</tspan>
   </text>
+  
+  <!-- Subtext: Cursor MCP -->
   <text x="250" y="295" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="36" text-anchor="middle" letter-spacing="3">
     <tspan fill="#00ffff">CURSOR </tspan><tspan fill="#e5e7eb">MCP</tspan>
   </text>
