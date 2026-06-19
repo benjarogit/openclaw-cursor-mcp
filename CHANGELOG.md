@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented here.
 
+## [1.1.0] - 2026-06-19
+
+### Added
+
+- **`scripts/setup-cursor-rules.sh`** — installs global Cursor rule at `~/.cursor/rules/openclaw-context.mdc`
+- **`config/openclaw-context.mdc`** — `alwaysApply: true` rule; Composer reads OpenClaw workspace files (`SOUL.md`, `USER.md`, `AGENTS.md`, `IDENTITY.md`, `TOOLS.md`, …)
+- README: full documentation for OpenClaw, Cursor, MCP, shared context, Telegram, scripts, and config
+- FAQ: **global vs project scope** — context rule applies to all Cursor workspaces, not only this repo
+
+### Changed
+
+- Quick start extended with step 4 (shared context) and optional desktop shortcuts
+- Architecture diagram updated (workspace files + MCP + global Cursor rules)
+
 ## [1.0.0] - 2026-06-19
 
 ### Added
@@ -19,4 +33,5 @@ All notable changes to this project are documented here.
 - Default model uses **Auto + Composer pool** (`cursor-cli/auto`), not API premium models
 - Tested on CachyOS with fish, Konsole, KDE Plasma, Cursor Pro+
 
+[1.1.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.1.0
 [1.0.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.0.0
