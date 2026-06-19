@@ -41,8 +41,8 @@ EOF
 
 chmod +x "$LOCAL_BIN/openclaw-dashboard" "$LOCAL_BIN/openclaw-chat" "$LOCAL_BIN/openclaw-cursor-check"
 
-if [[ -f "$REPO_ROOT/assets/openclaw.svg" ]]; then
-  cp "$REPO_ROOT/assets/openclaw.svg" "$ICON_DIR/openclaw.svg"
+if [[ -f "$REPO_ROOT/assets/logo.svg" ]]; then
+  cp "$REPO_ROOT/assets/logo.svg" "$ICON_DIR/openclaw-cursor-mcp.svg"
 fi
 
 cat > "$APPS_DIR/openclaw-dashboard.desktop" <<EOF
@@ -50,7 +50,7 @@ cat > "$APPS_DIR/openclaw-dashboard.desktop" <<EOF
 Name=OpenClaw Dashboard
 Comment=OpenClaw web control UI
 Exec=$LOCAL_BIN/openclaw-dashboard
-Icon=$ICON_DIR/openclaw.svg
+Icon=$ICON_DIR/openclaw-cursor-mcp.svg
 Terminal=false
 Type=Application
 Categories=Development;Utility;
@@ -61,7 +61,7 @@ cat > "$APPS_DIR/openclaw-chat.desktop" <<EOF
 Name=OpenClaw Chat
 Comment=OpenClaw terminal chat (TUI)
 Exec=konsole --separate -p tabtitle=OpenClaw -e $LOCAL_BIN/openclaw-chat
-Icon=$ICON_DIR/openclaw.svg
+Icon=$ICON_DIR/openclaw-cursor-mcp.svg
 Terminal=false
 Type=Application
 Categories=Development;Utility;

@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented here.
 
+## [1.3.1] - 2026-06-19
+
+### Changed
+
+- **New logo** `assets/logo.svg` — OpenClaw mascot + cursor pointer + “CURSOR MCP” wordmark (dark hero background for GitHub)
+- README & README.de.md use SVG logo (840px wide, crisp on all displays)
+- `banner.png` regenerated from logo (840×588)
+- Desktop shortcuts use `logo.svg` as icon
+
+### Removed
+
+- Legacy `assets/openclaw.svg`
+
 ## [1.3.0] - 2026-06-19
 
 ### Added
@@ -52,6 +65,7 @@ All notable changes to this project are documented here.
 - Default model uses **Auto + Composer pool** (`cursor-cli/auto`), not API premium models
 - Tested on CachyOS with fish, Konsole, KDE Plasma, Cursor Pro+
 
+[1.3.1]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.3.1
 [1.3.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.3.0
 [1.2.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.2.0
 [1.1.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.1.0
