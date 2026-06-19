@@ -1,8 +1,34 @@
-# OpenClaw + Cursor Integration
+<p align="center">
+  <img src="assets/banner.png" alt="OpenClaw — freundliches rotes Maskottchen mit türkisen Augen über dem OpenClaw-Logo auf dunklem Sternenhintergrund" width="1200">
+</p>
 
-**Sprachen:** [English](README.md) · **[Deutsch](README.de.md)**
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Lizenz-MIT-blue?style=for-the-badge" alt="MIT-Lizenz"></a>
+  <a href="https://github.com/benjarogit/openclaw-cursor-mcp/releases/latest"><img src="https://img.shields.io/github/v/release/benjarogit/openclaw-cursor-mcp?style=for-the-badge&label=Release" alt="Aktuelles Release"></a>
+  <img src="https://img.shields.io/badge/Plattform-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+  <img src="https://img.shields.io/badge/Open%20Source-Nutzen%20%26%20Erweitern-2ea44f?style=for-the-badge" alt="Open Source">
+</p>
 
-Scripts und Dokumentation, um **[OpenClaw](https://openclaw.ai/)** mit deinem **Cursor-Abo** unter Linux zu betreiben, **Cursor IDE** per **MCP** mit dem OpenClaw-Gateway zu verbinden und denselben **Agent-Kontext** (`SOUL.md`, `USER.md`, …) auf PC, Terminal und Telegram zu teilen.
+<p align="center">
+  <a href="https://openclaw.ai/"><img src="https://img.shields.io/badge/OpenClaw-Agent%20Platform-FF5F5F?style=flat-square" alt="OpenClaw"></a>
+  <a href="https://cursor.com/"><img src="https://img.shields.io/badge/Cursor-IDE%20%2B%20CLI-000?style=flat-square" alt="Cursor"></a>
+  <a href="https://docs.openclaw.ai/cli/mcp"><img src="https://img.shields.io/badge/MCP-Gateway%20Bridge-6366f1?style=flat-square" alt="MCP"></a>
+  <img src="https://img.shields.io/badge/Kontext-SOUL.md%20%7C%20USER.md%20%7C%20AGENTS.md-0ea5e9?style=flat-square" alt="Geteilter Kontext">
+</p>
+
+<p align="center">
+  <strong>Sprachen:</strong> <a href="README.md">English</a> · <a href="README.de.md"><strong>Deutsch</strong></a>
+</p>
+
+<p align="center">
+  <a href="https://openclaw.ai/">OpenClaw</a> mit deinem <strong>Cursor Pro / Pro+ Abo</strong> unter Linux —<br>
+  MCP-Anbindung für Cursor IDE · geteiltes Agent-Gedächtnis für Telegram, Terminal &amp; Composer
+</p>
+
+---
+
+> **Open Source — frei für alle.** Klonen, nutzen, forken, erweitern — wie du willst.  
+> MIT-Lizenz ([LICENSE](LICENSE)) — keine Vendor-Lock-in. Pull Requests und Ideen willkommen.
 
 **Repository:** [github.com/benjarogit/openclaw-cursor-mcp](https://github.com/benjarogit/openclaw-cursor-mcp)
 
@@ -360,6 +386,19 @@ Gateway läuft? `~/.cursor/mcp.json` ok? Cursor komplett neu starten.
 
 ---
 
+## Lizenz & Mitmachen
+
+Dieses Projekt steht unter der **[MIT-Lizenz](LICENSE)**. Du darfst es nutzen, kopieren, ändern, veröffentlichen und weitergeben — privat oder kommerziell — solange der Lizenz-Hinweis erhalten bleibt.
+
+- **Nutzen** — Scripts direkt auf deinem Rechner ausführen  
+- **Erweitern** — Configs, Rules und Docs anpassen  
+- **Forken** — eigene Variante veröffentlichen  
+- **Mitmachen** — Issues und Pull Requests auf [GitHub](https://github.com/benjarogit/openclaw-cursor-mcp)
+
+Keine Garantie — siehe LICENSE. Secrets (`gateway.token`, persönliche `mcp.json`) bleiben nur lokal.
+
+---
+
 ## Links
 
 - [OpenClaw Docs](https://docs.openclaw.ai/)
@@ -367,7 +406,3 @@ Gateway läuft? `~/.cursor/mcp.json` ok? Cursor komplett neu starten.
 - [OpenClaw MCP](https://docs.openclaw.ai/cli/mcp)
 - [Cursor CLI](https://cursor.com/docs/cli/overview)
 - [Repository](https://github.com/benjarogit/openclaw-cursor-mcp)
-
-## Lizenz
-
-MIT — siehe [LICENSE](LICENSE).

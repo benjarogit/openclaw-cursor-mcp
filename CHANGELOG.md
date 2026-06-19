@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here.
 
+## [1.3.0] - 2026-06-19
+
+### Added
+
+- **`assets/banner.png`** — README hero banner (1200×458, optimized for GitHub)
+- README & README.de.md — centered banner, badges (MIT, Linux, Open Source, Release), open-source / contributing sections
+
 ## [1.2.0] - 2026-06-19
 
 ### Changed
@@ -45,6 +52,7 @@ All notable changes to this project are documented here.
 - Default model uses **Auto + Composer pool** (`cursor-cli/auto`), not API premium models
 - Tested on CachyOS with fish, Konsole, KDE Plasma, Cursor Pro+
 
+[1.3.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.3.0
 [1.2.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.2.0
 [1.1.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.1.0
 [1.0.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.0.0
