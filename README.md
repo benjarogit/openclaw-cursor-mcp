@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="OpenClaw Cursor MCP — red mascot with cursor pointer, OpenClaw and CURSOR MCP wordmark" width="840">
+  <img src="assets/logo.svg" alt="OpenClaw Cursor MCP — red mascot with cursor pointer, OpenClaw and CURSOR MCP wordmark" width="480">
 </p>
 
 <p align="center">
