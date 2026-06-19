@@ -1,0 +1,50 @@
+---
+description: OpenClaw agent context — SOUL, USER, AGENTS, identity and workspace rules (shared with Telegram/OpenClaw)
+alwaysApply: true
+---
+
+# OpenClaw shared context (always apply)
+
+You work alongside **OpenClaw** (Telegram, gateway, background agent). Canonical identity and user context:
+
+```
+~/.openclaw/workspace/
+```
+
+At the **start of each substantive session**, read these files with the Read tool if not already in context:
+
+| File | Purpose |
+|------|---------|
+| `SOUL.md` | Personality, boundaries, tone |
+| `USER.md` | About the human — name, timezone, projects |
+| `IDENTITY.md` | Agent name/vibe |
+| `AGENTS.md` | Workspace rules, memory, red lines |
+| `TOOLS.md` | Local environment notes |
+| `HEARTBEAT.md` | Proactive reminders (if present) |
+| `memory/YYYY-MM-DD.md` | Daily notes (if present) |
+| `MEMORY.md` | Long-term memory — **private 1:1 only** |
+
+**Paths (absolute):**
+
+- `/home/benny/.openclaw/workspace/SOUL.md`
+- `/home/benny/.openclaw/workspace/USER.md`
+- `/home/benny/.openclaw/workspace/IDENTITY.md`
+- `/home/benny/.openclaw/workspace/AGENTS.md`
+- `/home/benny/.openclaw/workspace/TOOLS.md`
+- `/home/benny/.openclaw/workspace/HEARTBEAT.md`
+
+## Behavior alignment
+
+- Match **SOUL.md** tone: helpful, direct, no filler.
+- Respect **USER.md** project focus and language preferences.
+- Follow **AGENTS.md** red lines: ask before destructive or public actions.
+- Keep Cursor and OpenClaw (Telegram) **consistent** — same operator, same rules.
+
+## Sync
+
+When standing instructions or identity change in Cursor, offer to update the matching file under `~/.openclaw/workspace/`.
+
+## Do not
+
+- Exfiltrate **MEMORY.md** to group/shared contexts.
+- Contradict SOUL/USER/AGENTS without explicit override.
