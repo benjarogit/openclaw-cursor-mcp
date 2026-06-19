@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="OpenClaw — friendly red mascot with turquoise eyes above the OpenClaw logo on a dark starry background" width="1200">
+  <img src="assets/logo.svg" alt="OpenClaw Cursor MCP — red mascot with cursor pointer, OpenClaw and CURSOR MCP wordmark" width="840">
 </p>
 
 <p align="center">
@@ -386,8 +386,8 @@ openclaw-cursor-mcp/
 ├── README.de.md
 ├── CHANGELOG.md
 ├── assets/
-│   ├── banner.png              # README hero (1200×458)
-│   └── openclaw.svg
+│   ├── logo.svg                # Project logo (README + desktop icons)
+│   └── banner.png              # PNG export (840×588, optional)
 ├── config/
 │   ├── mcp.json.example
 │   ├── openclaw-context.mdc      # template → ~/.cursor/rules/

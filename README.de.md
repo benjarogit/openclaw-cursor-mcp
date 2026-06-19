@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="OpenClaw — freundliches rotes Maskottchen mit türkisen Augen über dem OpenClaw-Logo auf dunklem Sternenhintergrund" width="1200">
+  <img src="assets/logo.svg" alt="OpenClaw Cursor MCP — rotes Maskottchen mit Cursor-Zeiger, OpenClaw und CURSOR MCP Schriftzug" width="840">
 </p>
 
 <p align="center">
