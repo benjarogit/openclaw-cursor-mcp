@@ -1,50 +1,65 @@
 ---
-description: OpenClaw agent context — SOUL, USER, AGENTS, identity and workspace rules (shared with Telegram/OpenClaw)
+description: OpenClaw workspace context — load SOUL.md, USER.md, AGENTS.md and memory on every session (shared with Telegram)
 alwaysApply: true
 ---
 
-# OpenClaw shared context (always apply)
+# OpenClaw shared context (mandatory)
 
-You work alongside **OpenClaw** (Telegram, gateway, background agent). Canonical identity and user context:
+You share the **same agent workspace** as [OpenClaw](https://openclaw.ai/) (Telegram, `openclaw chat`, gateway). Canonical context lives here:
 
 ```
-~/.openclaw/workspace/
+__OPENCLAW_WORKSPACE__/
 ```
 
-At the **start of each substantive session**, read these files with the Read tool if not already in context:
+OpenClaw **injects these files on every turn**. In Cursor you must **load them actively** — same effect, same memory.
 
-| File | Purpose |
-|------|---------|
-| `SOUL.md` | Personality, boundaries, tone |
-| `USER.md` | About the human — name, timezone, projects |
-| `IDENTITY.md` | Agent name/vibe |
-| `AGENTS.md` | Workspace rules, memory, red lines |
-| `TOOLS.md` | Local environment notes |
-| `HEARTBEAT.md` | Proactive reminders (if present) |
-| `memory/YYYY-MM-DD.md` | Daily notes (if present) |
-| `MEMORY.md` | Long-term memory — **private 1:1 only** |
+## Required at session start (before first reply)
 
-**Paths (absolute):**
+On **every new Composer or Agent chat**, read these files with the **Read tool** in order (skip only if already loaded this session):
 
-- `/home/benny/.openclaw/workspace/SOUL.md`
-- `/home/benny/.openclaw/workspace/USER.md`
-- `/home/benny/.openclaw/workspace/IDENTITY.md`
-- `/home/benny/.openclaw/workspace/AGENTS.md`
-- `/home/benny/.openclaw/workspace/TOOLS.md`
-- `/home/benny/.openclaw/workspace/HEARTBEAT.md`
+| Order | File | Role |
+|------:|------|------|
+| 1 | `SOUL.md` | Personality, tone, boundaries, language |
+| 2 | `USER.md` | Human name, timezone, projects, channels |
+| 3 | `IDENTITY.md` | Agent name, emoji, vibe |
+| 4 | `AGENTS.md` | Workspace rules, memory policy, red lines |
+| 5 | `TOOLS.md` | Local setup (gateway, Telegram, SSH, git rules, …) |
+| 6 | `HEARTBEAT.md` | Periodic checks, quiet hours (if present) |
+| 7 | `memory/YYYY-MM-DD.md` | Today's daily note — use **today's date** in workspace timezone from `USER.md` |
+| 8 | `MEMORY.md` | Long-term curated memory — **private 1:1 only**, never in group/shared contexts |
 
-## Behavior alignment
+**Absolute paths:**
 
-- Match **SOUL.md** tone: helpful, direct, no filler.
-- Respect **USER.md** project focus and language preferences.
-- Follow **AGENTS.md** red lines: ask before destructive or public actions.
-- Keep Cursor and OpenClaw (Telegram) **consistent** — same operator, same rules.
+- `__OPENCLAW_WORKSPACE__/SOUL.md`
+- `__OPENCLAW_WORKSPACE__/USER.md`
+- `__OPENCLAW_WORKSPACE__/IDENTITY.md`
+- `__OPENCLAW_WORKSPACE__/AGENTS.md`
+- `__OPENCLAW_WORKSPACE__/TOOLS.md`
+- `__OPENCLAW_WORKSPACE__/HEARTBEAT.md`
+- `__OPENCLAW_WORKSPACE__/memory/` (today's file)
+- `__OPENCLAW_WORKSPACE__/MEMORY.md` (if exists, private only)
 
-## Sync
+`BOOTSTRAP.md` is **not used** after initial setup — do not expect it.
 
-When standing instructions or identity change in Cursor, offer to update the matching file under `~/.openclaw/workspace/`.
+## Behavior (apply file contents, not summaries)
+
+- **Follow SOUL.md** — tone, language, specialist focus (e.g. Woltlab, Linux).
+- **Follow USER.md** — who you help, timezone, active projects, PC vs Telegram channels.
+- **Follow AGENTS.md** — memory writes, heartbeats, destructive-action rules.
+- **Follow TOOLS.md** — environment-specific facts (bots, paths, git/release rules).
+- **One operator** — Cursor IDE and OpenClaw/Telegram must give **consistent** answers.
+
+## Memory growth (same as OpenClaw)
+
+- User says *"remember …"* → offer to write `memory/YYYY-MM-DD.md` or `MEMORY.md`.
+- Important facts → curate into `MEMORY.md` over time (private sessions only).
+
+## Sync back to workspace
+
+If identity, tools, or standing instructions change in Cursor, **update the matching `.md` file** under `__OPENCLAW_WORKSPACE__/` so Telegram/OpenClaw stay aligned.
 
 ## Do not
 
-- Exfiltrate **MEMORY.md** to group/shared contexts.
-- Contradict SOUL/USER/AGENTS without explicit override.
+- Treat workspace files as optional reference — they **are** your persistent context.
+- Exfiltrate `MEMORY.md` to public or group contexts.
+- Contradict SOUL / USER / AGENTS without explicit user override.
