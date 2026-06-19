@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "allow": ["cursor-cli"],
+    "entries": {
+      "cursor-cli": {
+        "enabled": true,
+        "config": {
+          "command": "/home/YOUR_USER/.local/bin/cursor-agent",
+          "mode": "agent"
+        }
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "cursor-cli/auto"
+      }
+    }
+  }
+}

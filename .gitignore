@@ -1,0 +1,17 @@
+# Secrets — never commit
+gateway.token
+.env
+*.token
+.cursor/mcp.json
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Node (if you extend scripts later)
+node_modules/
+
+# Local overrides
+config/local/

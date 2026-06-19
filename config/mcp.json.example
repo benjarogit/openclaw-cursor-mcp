@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "openclaw": {
+      "command": "/home/YOUR_USER/.npm-global/bin/openclaw",
+      "args": [
+        "mcp",
+        "serve",
+        "--url",
+        "ws://127.0.0.1:18789",
+        "--token-file",
+        "/home/YOUR_USER/.openclaw/gateway.token"
+      ]
+    }
+  }
+}
