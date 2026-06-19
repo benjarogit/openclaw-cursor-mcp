@@ -7,6 +7,8 @@ OPENCLAW_WORKSPACE="${OPENCLAW_WORKSPACE:-$HOME/.openclaw/workspace}"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RULE_SRC="$REPO_ROOT/config/openclaw-context.mdc"
 RULE_DST="$CURSOR_RULES/openclaw-context.mdc"
+GIT_RULE_SRC="$REPO_ROOT/config/git-no-cursor-coauthor.mdc"
+GIT_RULE_DST="$CURSOR_RULES/git-no-cursor-coauthor.mdc"
 
 info() { printf '\033[1;36m→\033[0m %s\n' "$*"; }
 ok()   { printf '\033[1;32m✓\033[0m %s\n' "$*"; }
@@ -23,6 +25,12 @@ mkdir -p "$CURSOR_RULES"
 info "Installing global Cursor rule…"
 cp "$RULE_SRC" "$RULE_DST"
 sed -i "s|__OPENCLAW_WORKSPACE__|$OPENCLAW_WORKSPACE|g" "$RULE_DST"
+
+if [[ -f "$GIT_RULE_SRC" ]]; then
+  info "Installing git identity rule (no cursoragent co-author)…"
+  cp "$GIT_RULE_SRC" "$GIT_RULE_DST"
+  ok "Installed: $GIT_RULE_DST"
+fi
 
 ok "Installed: $RULE_DST"
 echo

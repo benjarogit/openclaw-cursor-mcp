@@ -1,0 +1,33 @@
+---
+description: Git commits — never Cursor/cursoragent as author or co-author (global, mandatory)
+alwaysApply: true
+---
+
+# Git identity — no Cursor co-author (NEVER)
+
+## Absolute rule
+
+**Never** add Cursor, cursoragent, or Cursor Agent as git author or co-author.
+
+Forbidden in commit messages:
+
+```
+Co-authored-by: Cursor <cursoragent@cursor.com>
+Co-authored-by: cursoragent@cursor.com
+Author: cursoragent
+```
+
+GitHub lists co-authors as **Contributors** — this must not happen.
+
+## When committing
+
+1. **Author is always the human** — match existing `git log -1 --format='%an <%ae>'` on the repo.
+2. **Commit message = only the message** — no `Co-authored-by` trailers unless the user explicitly names a human co-author.
+3. **Before push**, verify commit bodies contain no `cursoragent@cursor.com`.
+4. **Do not** rely on Cursor/IDE auto-attribution — strip co-author trailers if a tool adds them.
+
+## Do not
+
+- Add "Co-authored-by: Cursor" for attribution
+- Commit as `cursoragent` or `cursoragent@cursor.com`
+- Push commits containing cursoragent trailers

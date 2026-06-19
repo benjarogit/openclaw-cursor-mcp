@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented here.
 
+## [Unreleased]
+
+### Added
+
+- **`config/git-no-cursor-coauthor.mdc`** — global Cursor rule: never `Co-authored-by: Cursor <cursoragent@cursor.com>` on commits
+- `setup-cursor-rules.sh` installs git identity rule alongside OpenClaw context rule
+
+### Fixed
+
+- Removed erroneous `Co-authored-by: Cursor <cursoragent@cursor.com>` trailers from entire git history (GitHub Contributors)
+
 ## [1.3.1] - 2026-06-19
 
 ### Changed
