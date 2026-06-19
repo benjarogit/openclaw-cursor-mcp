@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented here.
 
+## [1.2.0] - 2026-06-19
+
+### Changed
+
+- **`config/openclaw-context.mdc`** — mandatory session-start read list (matches OpenClaw turn injection); ordered file table; `memory/YYYY-MM-DD.md`; `BOOTSTRAP.md` noted as obsolete; `__OPENCLAW_WORKSPACE__` placeholder
+- **`scripts/setup-cursor-rules.sh`** — substitutes workspace path; validates `USER.md`; clearer post-install output
+
+### Added
+
+- **`README.de.md`** — full German guide with table of contents (OpenClaw, Cursor, MCP, shared context, daily use, FAQ)
+- README: language switcher; clearer OpenClaw vs Cursor context loading comparison
+
 ## [1.1.0] - 2026-06-19
 
 ### Added
@@ -33,5 +45,6 @@ All notable changes to this project are documented here.
 - Default model uses **Auto + Composer pool** (`cursor-cli/auto`), not API premium models
 - Tested on CachyOS with fish, Konsole, KDE Plasma, Cursor Pro+
 
+[1.2.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.2.0
 [1.1.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.1.0
 [1.0.0]: https://github.com/benjarogit/openclaw-cursor-mcp/releases/tag/v1.0.0

@@ -1,5 +1,7 @@
 # OpenClaw + Cursor Integration
 
+**Languages:** [English](README.md) · **[Deutsch (Anleitung)](README.de.md)**
+
 Scripts and documentation to run **[OpenClaw](https://openclaw.ai/)** with your **Cursor subscription** on Linux, connect **Cursor IDE** to the OpenClaw Gateway via **MCP**, and share the same **agent context** (`SOUL.md`, `USER.md`, …) between Telegram, terminal chat, and Composer.
 
 **Repository:** [github.com/benjarogit/openclaw-cursor-mcp](https://github.com/benjarogit/openclaw-cursor-mcp)
@@ -215,10 +217,15 @@ Composer is instructed to **read** the workspace files at the start of substanti
 
 ### How it works technically
 
+| Channel | How context is loaded |
+|---------|------------------------|
+| **OpenClaw / Telegram** | Workspace `.md` files are **injected automatically** on every turn |
+| **Cursor Composer** | Global rule (`alwaysApply: true`) **requires reading** the same files at **every new chat** before the first reply — same content, active load via Read tool |
+
 | Mechanism | Scope | Behavior |
 |-----------|--------|----------|
-| OpenClaw workspace | OpenClaw only | Files injected into agent context each turn |
-| `~/.cursor/rules/*.mdc` + `alwaysApply: true` | **All Cursor projects globally** | Rule text always present; agent reads `.md` files via Read tool when relevant |
+| OpenClaw workspace | OpenClaw channels | Automatic injection each turn |
+| `~/.cursor/rules/openclaw-context.mdc` | **All Cursor projects globally** | Mandatory session-start read list |
 | Project `.cursor/rules/` | Single repo only | Only that workspace |
 
 This repo installs the **user-level** rule under `~/.cursor/`, not under a project folder.
@@ -233,9 +240,9 @@ If you change preferences in Cursor, update the matching `.md` file so Telegram 
 
 ### Limitations (honest)
 
-- Not byte-for-byte identical to OpenClaw injection — Cursor uses a **rule + Read tool**, not automatic full-file prepend every token
-- Very short one-off questions may skip re-reading all files
-- `MEMORY.md` should stay private (rule mirrors OpenClaw’s AGENTS.md policy)
+- Cursor loads via **Read tool on session start** (mandatory per rule), not byte-for-byte token injection like OpenClaw — content and behavior should match once files are read
+- If the agent skips reads, re-run `setup-cursor-rules.sh` and restart Cursor; start a **new** Composer tab
+- `MEMORY.md` stays private (rule mirrors OpenClaw AGENTS.md policy)
 
 ---
 
